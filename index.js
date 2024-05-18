@@ -9,7 +9,8 @@ class Player {
   // Define a class Menu to interact with a list of players
 class Menu {
     constructor() {
-      this.players = []; // Initialize an empty array to store players
+        // Initialize an empty array to store players
+    this.players = []; 
     }
 
     // Method to create a new player and add it to the players array
@@ -30,11 +31,15 @@ class Menu {
 
     // Method to delete a player from the players array by index
     deletePlayer(index) {
-      if (index < 0 || index >= this.players.length) { // Check if the index is valid
-        console.log("Invalid player index."); // Log an error message for invalid index
+        // Check if the index is valid
+      if (index < 0 || index >= this.players.length) { 
+        // Log an error message for invalid index
+        console.log("Invalid player index."); 
     } else {
-        const deletedPlayer = this.players.splice(index, 1); // Remove the player at the specified index
-        console.log(`Player ${deletedPlayer[0].name} with number ${deletedPlayer[0].number} deleted.`); // Log a message to indicate player deletion
+        // Remove the player at the specified index
+        const deletedPlayer = this.players.splice(index, 1); 
+        // Log a message to indicate player deletion
+        console.log(`Player ${deletedPlayer[0].name} with number ${deletedPlayer[0].number} deleted.`); 
     }
     }
 }
